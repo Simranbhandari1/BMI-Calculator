@@ -87,7 +87,13 @@ button{
     height: 40px;
     width: 120px;
 }
-btn:focus {
+.btn:focus {
     border-color: #888; /* subtle border change on focus */
     box-shadow: 0 0 5px rgba(0,0,0,0.1); /* soft shadow instead of outline */
+}
+#reset-btn{
+
+    height: 40px;
+    width: 120px;
+    display: none;
 }

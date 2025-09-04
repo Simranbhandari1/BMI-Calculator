@@ -3,6 +3,7 @@ const heightValue = document.getElementsByClassName("height")[0];
 const btn = document.getElementsByClassName("btn")[0];
 const bmiValue = document.getElementById("bmi-value");
 const bmiAnalyse = document.getElementById("bmi-analyse");
+const reset = document.getElementById("reset-btn");
 
 // Load saved data on page load
 window.addEventListener("load", () => {
@@ -40,9 +41,34 @@ btn.addEventListener("click", () => {
   bmiValue.innerText = `BMI: ${bmi.toFixed(1)}`;
   bmiAnalyse.innerText = `Your BMI category is ${category}`;
 
+  reset.style.display="block";
+
   // Save to localStorage
   localStorage.setItem("weight", weightValue.value);
   localStorage.setItem("height", heightValue.value);
   localStorage.setItem("bmi", bmi.toFixed(1));
   localStorage.setItem("category", category);
+
+
+});
+
+
+
+reset.addEventListener("click", () => {
+    // Remove stored data
+    localStorage.removeItem("weight");
+    localStorage.removeItem("height");
+    localStorage.removeItem("bmi");
+    localStorage.removeItem("category");
+
+    // Clear inputs
+    weightValue.value = "";
+    heightValue.value = "";
+
+    // Clear results
+    bmiValue.innerText = "";
+    bmiAnalyse.innerText = "";
+
+    // Hide the reset button again
+    reset.style.display = "none";
 });
