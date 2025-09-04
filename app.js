@@ -7,11 +7,11 @@ const bmiValue = document.getElementById("bmi-value");
 const bmiAnalyse = document.getElementById("bmi-analyse");
 
 btn.addEventListener("click" , () =>{
- if (isNaN(weightValue) || isNaN(heightValue) || weightValue <= 0 || heightValue <= 0) {
-    bmiValue.innerText = "Invalid input";
-    bmiAnalyse.innerText = "";
-    return;
-  }
+//  if (isNaN(weight) || isNaN(height) || weight.value <= 0 || height.value <= 0) {
+//     bmiValue.innerText = "Invalid input";
+//     bmiAnalyse.innerText = "";
+//     return;
+//   }
     
 // console.log(weight.value);
 // console.log(height.value);
