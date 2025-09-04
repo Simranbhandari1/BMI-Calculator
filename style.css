@@ -73,3 +73,21 @@ button{
      height: 30px;
     width: 100px;
 }
+#bmi-analyse{
+
+    font-size: 20px;
+}
+
+#bmi-value{
+ font-size: 20px;
+ margin-top: 10px;
+}
+
+.btn{
+    height: 40px;
+    width: 120px;
+}
+btn:focus {
+    border-color: #888; /* subtle border change on focus */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1); /* soft shadow instead of outline */
+}
